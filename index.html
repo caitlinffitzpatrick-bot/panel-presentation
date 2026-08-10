@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caitlin Fitzpatrick · Director, Solutions Engineering</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink: #1E241D;
@@ -21,7 +22,7 @@
     --muted-light: #ABB8A4;
     --line: #DFE4D9;
     --line-dark: #3C4838;
-    --serif: 'Fraunces', Georgia, serif;
+    --serif: 'Lora', Georgia, serif;
     --sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --mono: 'IBM Plex Mono', 'Courier New', monospace;
   }
@@ -207,6 +208,21 @@
 
   footer.legend{ background: var(--ink); color: var(--muted-light); text-align:center; padding: 16px 0 22px; font-family: var(--mono); font-size: 10px; letter-spacing:0.08em; display:flex; align-items:center; justify-content:center; gap:10px; }
   footer.legend img{ width:16px; height:16px; opacity:0.6; }
+
+  /* ---------- capstone (why this fit works) ---------- */
+  #capstone{ background: var(--paper); padding: 20px 0 90px; }
+  .capstone-panel{ border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 64px 0; }
+  .capstone-head{ max-width: 780px; }
+  .capstone-title{ font-family: var(--serif); font-weight:600; font-size: clamp(28px,3.6vw,42px); line-height:1.12; letter-spacing:-0.01em; }
+  .capstone-title em{ font-style:italic; font-weight:500; color: var(--sage-deep); }
+  .capstone-sub{ margin-top:16px; font-size:16px; line-height:1.6; color: var(--muted); max-width: 620px; }
+  .capstone-list{ margin-top: 44px; display:grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  @media (max-width: 760px){ .capstone-list{ grid-template-columns:1fr; } }
+  .capstone-item{ display:grid; grid-template-columns: 22px 1fr; gap:14px; padding: 20px 0; border-top:1px solid var(--line); }
+  .capstone-dot{ width:8px; height:8px; border-radius:50%; background: var(--sage); margin-top:7px; }
+  .capstone-item-title{ font-family:var(--serif); font-weight:600; font-size:16px; margin-bottom:6px; }
+  .capstone-item-body{ font-size:13.4px; color: var(--muted); line-height:1.58; }
+  .capstone-punch{ margin-top: 40px; font-family: var(--serif); font-style: italic; font-size: clamp(18px,2vw,22px); color: var(--ink-soft); border-left: 3px solid var(--sage); padding-left: 24px; max-width: 640px; }
 </style>
 </head>
 <body>
@@ -334,32 +350,32 @@
     <div class="topic" id="t2">
       <button class="topic-head">
         <div>
-          <div class="topic-headline"><span class="topic-index">02 · How I Lead</span> <span class="chip">Collaboration first</span></div>
+          <div class="topic-headline"><span class="topic-index">02 · How I Lead</span> <span class="chip">Clarity through collaboration</span></div>
           <div class="topic-title">Leadership Style</div>
-          <div class="topic-teaser">Servant leadership, grounded in data, clear communication, and no ego.</div>
+          <div class="topic-teaser">I create clarity in complexity: bringing people together, making tradeoffs visible, and moving teams toward action.</div>
         </div>
         <div class="topic-toggle"></div>
       </button>
       <div class="topic-body-wrap"><div class="topic-body-inner"><div class="topic-body">
 
-        <p class="lede">What matters most to me, with this team and with other leaders, is the <b>spirit of collaboration</b>: sharing best practices, working through internal challenges together, passing along market intel and recent wins, and analyzing breakdowns in process or results with no ego involved.</p>
+        <p class="lede">My leadership style starts with collaboration, but the goal is clarity and action. I bring the right people and perspectives together, share information openly, and make tradeoffs visible so we can solve problems without ego or territorial thinking. The best outcome isn't individual credit. It's a team that understands the objective, can make strong decisions, and moves forward together.</p>
 
         <div class="card-grid">
           <div class="card featured">
             <div class="card-title">Collaboration over ego</div>
-            <div class="card-body">Best practices, internal challenges, market wins, and breakdowns in process, all shared openly, analyzed without defensiveness, and treated as team property, not individual credit or blame.</div>
+            <div class="card-body">Best practices, internal challenges, market intelligence, wins, and breakdowns in process should be shared openly and treated as team property, not individual credit or blame. Collaboration works best when people can challenge ideas without becoming defensive.</div>
           </div>
           <div class="card">
             <div class="card-title">Clarity over comfort</div>
-            <div class="card-body">When ownership, process, or next steps are undefined, I ask the tough question early rather than let ambiguity sit. That's been my pattern for years. It's how I've operated even without a title.</div>
+            <div class="card-body">When ownership, process, or next steps are unclear, I surface the hard question early rather than letting ambiguity become risk. My role as a leader is to make objectives, tradeoffs, and accountability clear enough that people can make good decisions and move forward.</div>
           </div>
           <div class="card">
             <div class="card-title">Bias toward action</div>
-            <div class="card-body">When a client needs urgency, I don't spend time on blame or issue autopsies. I bring the right people together, align on the objective, and move toward resolution.</div>
+            <div class="card-body">When something requires urgency, I don't spend time assigning blame or waiting for perfect conditions. I bring the right people together, establish what we're solving for, make the necessary tradeoffs, and move toward resolution.</div>
           </div>
           <div class="card">
             <div class="card-title">Calm under pressure</div>
-            <div class="card-body">A consistent theme in feedback I've received: calmness, clarity, and pragmatism in complex, high-pressure client situations. That's the tone I want to set for the team.</div>
+            <div class="card-body">A consistent theme in feedback I've received is calmness, clarity, and pragmatism in complex, high-pressure situations. I want my team to know that urgency doesn't require chaos. We can move quickly while still thinking clearly and treating people well.</div>
           </div>
         </div>
 
@@ -398,8 +414,8 @@
             <div class="gap-panel">
               <div class="gap-label">Growth area</div>
               <h4>Negotiation &amp; value positioning</h4>
-              <p>I've been painted into a corner on deals where our opening offer should have been where we landed.</p>
-              <div class="gap-plan">Closing it: I'm completing <b>Black Swan negotiation coursework</b> in 2026, and folding what I learn directly into the team-wide negotiation training I'm proposing, modeling the gap-closing before asking the team to do the same.</div>
+              <p>I've opened negotiations from a position that gave away more room than we needed, and watched deals close below where they should have landed.</p>
+              <div class="gap-plan">Closing it: I'm completing <b>Black Swan negotiation coursework</b> in 2026, and I want to run creative pricing exercises using closed-lost deal parameters, so we walk in with pre-gamed, workable structures instead of improvising under pressure. I'd also want to bring in formal negotiation training for the team if budget allows.</div>
             </div>
           </div>
         </div>
@@ -425,15 +441,18 @@
             <ul>
               <li>A high-achieving group of Type A personalities who genuinely want to win</li>
               <li>Deep knowledge and real comfort operating in ambiguity</li>
+              <li>A genuine learning culture. We stress test new services and dig into how they'll actually work and integrate into deals before we ever bring them to a client</li>
               <li>Some of the highest tenure and cross-org exposure in the company</li>
+              <li>A strong foundation of collaboration already in place, one I want to build on rather than start from scratch</li>
             </ul>
           </div>
           <div class="strong-block block-better">
             <div class="lbl">What could be better</div>
             <ul>
-              <li>Opportunity assignment still defaults to old habits, like "Kyle's strongest in Parcel, give him this deal," or Sales dictating who they want</li>
-              <li>Implementation fees get waived by default instead of exploring creative structures</li>
-              <li>Solutions typically sets the first offer in proposals, which puts margin at risk if we're not deliberate about it</li>
+              <li>Opportunity assignment still defaults to old habits and documented strengths, or Sales dictating which engineer to work with. This limits the bench strength in every category.</li>
+              <li>Work product varies by individual. Each person is strong on their own, but non-negotiable standards for client deliverables would raise the bar across the whole team.</li>
+              <li>Pricing strategy leans on entrenched habits, like default fee waivers and safe opening offers. We should be willing to challenge those norms where it helps get a deal across the line.</li>
+              <li>New Logo closes over $100K in annual revenue could carry a small one-time incentive, around $500 per signature. Applied to what we actually closed in 2026, that's roughly $3,500 total, small enough to be a rounding error, but worth testing whether it pushes additional revenue, faster closes, or a few more wins.</li>
             </ul>
           </div>
         </div>
@@ -468,39 +487,85 @@
         <div>
           <div class="topic-headline"><span class="topic-index">05 · How We Win Together</span></div>
           <div class="topic-title">Cross-Functional Engagement</div>
-          <div class="topic-teaser">Most friction isn't disagreement. It's two teams both assuming the other owns something.</div>
+          <div class="topic-teaser">Solutions engages with Sales one way, and Client Services another. Worth defining that together, not leaving it to default assumptions.</div>
         </div>
         <div class="topic-toggle"></div>
       </button>
       <div class="topic-body-wrap"><div class="topic-body-inner"><div class="topic-body">
 
-        <p class="lede">The single most important thing in driving successful cross-functional engagements is understanding <b>the role each player is meant to play</b>, and saying it out loud. In cross-sell and upsell especially, that role shifts underneath us without anyone naming it.</p>
+        <p class="lede">The single most important thing in driving successful cross-functional engagements is understanding <b>the role each player is meant to play</b>, and defining that together rather than leaving it to default assumptions. Solutions engages with Sales one way and with Client Services another, and that difference is worth naming directly.</p>
 
         <div class="role-contrast">
           <div class="role-card">
             <div class="rc-label">New Logo</div>
-            <div class="rc-title">Sales drives the relationship</div>
-            <div class="rc-body">Solutions is the knowledge base: the thing that makes a prospect feel comfortable enough to say yes. A supporting role, and a clear one.</div>
+            <div class="rc-title">A role that's already well defined</div>
+            <div class="rc-body">Sales drives the relationship. Solutions is the knowledge base that helps a prospect feel confident enough to say yes. Both sides understand the role clearly, because we've had the conversation.</div>
           </div>
           <div class="role-vs">vs.</div>
           <div class="role-card">
             <div class="rc-label">Client Services / Upsell</div>
-            <div class="rc-title">Solutions is expected to own momentum</div>
-            <div class="rc-body">The expectation quietly shifts. Solutions is treated as the owner of forward momentum and the relationship itself. A different role, never explicitly assigned.</div>
+            <div class="rc-title">Mutually finalize RACI and expectations</div>
+            <div class="rc-body">Cross-sell and upsell expectations between Solutions and Client Services haven't been formalized the way they have with Sales. I want to work with Client Services leadership to mutually finalize a clear RACI, so ownership doesn't rely on assumption.</div>
           </div>
         </div>
 
-        <div class="mini-note" style="margin-top:28px;">That unspoken mismatch is the real source of tension between Solutions and Client Services on upsell work. A frank conversation about who owns what, not a rulebook, is what eliminates it and lets us work upsells more efficiently.</div>
+        <div class="mini-note" style="margin-top:28px;">This isn't about either team doing something wrong. It's a genuine cultural difference in how Solutions engages with Sales versus how it engages with Client Services. Closing that gap means mutually finalizing a RACI and clear expectations together, not leaving ownership to assumption.</div>
 
         <div class="priority-list">
-          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">Treat renewals with the same rigor as new logo</div><div class="priority-body">Renewal work is often heavier than new-logo work but gets valued less formally. I want that time investment planned for deliberately, not absorbed as overflow.</div></div></div>
-          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">Proactive, in-person relationship building</div><div class="priority-body">Being one of two team members based in the main office has already built real relationships with cross-functional and freight leadership. I intend to use that deliberately.</div></div></div>
-          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">Structured, recurring touchpoints</div><div class="priority-body">Regular working sessions with Sales, Client Services, and Implementation leadership, plus continuing the cross-org "fireside chat" visibility sessions the team has already asked to keep.</div></div></div>
+          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">Define clear ownership across renewal milestones</div><div class="priority-body">Renewals get worked with real urgency. Where they lose time is in the handoffs between milestones, where ownership isn't always clearly defined. I want that clarity built in deliberately, not figured out mid-deal.</div></div></div>
+          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">A tightening partnership with Implementation</div><div class="priority-body">David now leads both Solutions and Implementation, which pulls these two teams closer by design, not just by circumstance. We've already built a standardized needs list for the handoff, and David is actively working it into Sidekick, our new AI project. I want to build on that momentum rather than start it from scratch.</div></div></div>
+          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">An onsite presence, working as a conduit for the team</div><div class="priority-body">Being one of two team members onsite in Hickory has already built real relationships with cross-functional and freight leadership. I intend to use that deliberately, not just for my own visibility, but as a conduit that brings the rest of the team, most of whom work remotely, into rooms and relationships they would not otherwise have easy access to.</div></div></div>
+          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">Structured, recurring touchpoints</div><div class="priority-body">Regular working sessions with Sales, Client Services, and Implementation leadership, plus continuing the cross-org "fireside chat" visibility sessions the team has already asked to keep. Individual engineers already build real relationships with cross-functional leaders through deal cycles and these fireside chats, and I want to keep encouraging that directly, while looking for more ways the organization can put this team's tenure to work on internal projects.</div></div></div>
         </div>
 
       </div></div></div>
     </div>
 
+  </div>
+</section>
+
+<section id="capstone" class="rail-space">
+  <div class="wrap">
+    <div class="capstone-panel">
+      <div class="capstone-head">
+        <div class="eyebrow" style="margin-bottom:18px;">In Conclusion</div>
+        <h2 class="capstone-title">Not five strengths. <em>One combination.</em></h2>
+        <p class="capstone-sub">Each of these exists somewhere else on this team. All of them, in one person, do not.</p>
+      </div>
+
+      <div class="capstone-list">
+        <div class="capstone-item">
+          <div class="capstone-dot"></div>
+          <div>
+            <div class="capstone-item-title">Built for the exact transition this role requires</div>
+            <div class="capstone-item-body">I have already made the peer to manager shift once, as a TL manager. This will not be my first attempt at it.</div>
+          </div>
+        </div>
+        <div class="capstone-item">
+          <div class="capstone-dot"></div>
+          <div>
+            <div class="capstone-item-title">Fluent across the boundaries that cause the friction</div>
+            <div class="capstone-item-body">Five departments over fourteen years means I have sat on both sides of the handoffs I am proposing to fix.</div>
+          </div>
+        </div>
+        <div class="capstone-item">
+          <div class="capstone-dot"></div>
+          <div>
+            <div class="capstone-item-title">A vision the team already asked for</div>
+            <div class="capstone-item-body">What I am proposing is not outside analysis. It reflects what this team has already told leadership it needs, with a plan to act on it.</div>
+          </div>
+        </div>
+        <div class="capstone-item">
+          <div class="capstone-dot"></div>
+          <div>
+            <div class="capstone-item-title">Growth areas named, not hidden</div>
+            <div class="capstone-item-body">I know exactly where I need to develop, and I already have a plan and a timeline attached to closing those gaps.</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="capstone-punch">That is a track record with a plan attached, not just a pitch.</p>
+    </div>
   </div>
 </section>
 
