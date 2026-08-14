@@ -138,6 +138,13 @@
   .voice cite{ display:block; margin-top:14px; font-style:normal; font-family: var(--mono); font-size:11px; color: var(--muted-light); letter-spacing:0.06em; }
 
   .chip{ display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; background: var(--sage-pale); color: var(--sage-deep); padding:5px 11px; border-radius:20px; font-weight:600; }
+
+  /* ---------- leadership flip statement + trait chips ---------- */
+  .flip-line{ display:flex; align-items:center; flex-wrap:wrap; gap:14px; margin: 24px 0 26px; }
+  .flip-old{ font-family: var(--serif); font-size: clamp(19px,2.3vw,25px); color: var(--muted-light); text-decoration: line-through; text-decoration-color: var(--muted-light); text-decoration-thickness: 1.5px; }
+  .flip-arrow{ font-family: var(--mono); font-size: 16px; color: var(--sage-deep); }
+  .flip-new{ font-family: var(--serif); font-weight:600; font-style: italic; font-size: clamp(19px,2.3vw,25px); color: var(--ink); }
+  .trait-row{ display:flex; flex-wrap:wrap; gap:9px; margin-bottom: 26px; }
   .chip::before{ content:"✦"; font-size:9px; }
 
   .card-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
@@ -223,6 +230,25 @@
   .capstone-item-title{ font-family:var(--serif); font-weight:600; font-size:16px; margin-bottom:6px; }
   .capstone-item-body{ font-size:13.4px; color: var(--muted); line-height:1.58; }
   .capstone-punch{ margin-top: 40px; font-family: var(--serif); font-style: italic; font-size: clamp(18px,2vw,22px); color: var(--ink-soft); border-left: 3px solid var(--sage); padding-left: 24px; max-width: 640px; }
+
+  /* ---------- assessment plan (personal development) ---------- */
+  .assess-block{ margin-top: 44px; }
+  .assess-label{ font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color: var(--sage-deep); margin-bottom:16px; }
+  .assess-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 760px){ .assess-grid{ grid-template-columns: 1fr; } }
+  .assess-card{ background: var(--white); border: 1px solid var(--line); padding: 22px 22px 20px; }
+  .assess-move{ font-family: var(--mono); font-size:11px; color: var(--sage-deep); letter-spacing:.05em; margin-bottom:6px; }
+  .assess-title{ font-family: var(--serif); font-weight:600; font-size:16.5px; color: var(--ink); margin-bottom:14px; }
+  .assess-list{ list-style:none; }
+  .assess-list li{ position:relative; padding-left:16px; font-size:12.8px; line-height:1.55; color: var(--muted); margin-bottom:9px; }
+  .assess-list li:last-child{ margin-bottom:0; }
+  .assess-list li:before{ content:"\2022"; position:absolute; left:0; color: var(--sage); }
+
+  /* ---------- foundation strip (cross-functional) ---------- */
+  .foundation{ margin: 0 0 44px; padding: 26px 28px; background: var(--white); border: 1px solid var(--line); }
+  .foundation-title{ font-family: var(--serif); font-weight:600; font-size:17px; color: var(--ink); margin-bottom:10px; }
+  .foundation-body{ font-size: 13.6px; line-height:1.62; color: var(--muted); max-width: 760px; }
+  .foundation-chips{ margin-top:18px; display:flex; flex-wrap:wrap; gap:8px; }
 </style>
 </head>
 <body>
@@ -258,8 +284,8 @@
   <div class="wrap">
     <div>
       <div class="eyebrow" style="margin-bottom:20px;">Director, Solutions Engineering · Candidate</div>
-      <h1>My story. My style. <em>Our path forward.</em></h1>
-      <p class="hero-sub">Five things this panel asked me to cover, tackled directly: who I am, how I'd lead, where I'll grow, where this team is headed, and how we win together across the org.</p>
+      <h1>My story. <em>My vision.</em></h1>
+      <p class="hero-sub">Five things this panel asked me to cover: who I am, how I'd lead, where I'll grow, my vision, and how we win together.</p>
       <div class="hero-meta">
         <div><div class="eyebrow">Candidate</div><div class="val">Caitlin Fitzpatrick</div></div>
         <div><div class="eyebrow">Since</div><div class="val">Jan 2012</div></div>
@@ -288,30 +314,30 @@
         <div>
           <div class="topic-headline"><span class="topic-index">01 · Where I've Been</span></div>
           <div class="topic-title">Personal Overview</div>
-          <div class="topic-teaser">Five departments, fourteen years, and the track record that came with them.</div>
+          <div class="topic-teaser">Five departments, fourteen years, and the throughline is continuous improvement and an always-be-learning mindset.</div>
         </div>
         <div class="topic-toggle"></div>
       </button>
       <div class="topic-body-wrap"><div class="topic-body-inner"><div class="topic-body">
 
-        <p class="lede">I joined TI through the <b>Sales Academy</b>, originally slated for an SDR role. That program quickly became the <b>Operations Academy</b>, built to tour new hires through different departments across the org. Clay pulled me into Client Services first, and from there I found my way through five departments over fourteen years: Client Services, Procurement, Client Operations, Implementation, and now Solutions. Each stop taught me a different piece of how a scoping decision upstream creates real consequences three teams downstream.</p>
+        <p class="lede">I joined TI through the <b>Sales Academy</b>, originally slated for an SDR role. That program quickly became the <b>Operations Academy</b>, built to tour new hires through different departments across the org. I started my full-time role in Client Services, and from there I found my way through five departments over fourteen years: Client Services, Procurement, Product Management, Implementation, and now Solutions. Each stop taught me a different piece of how a scoping decision upstream creates real consequences three teams downstream.</p>
 
         <div class="tl-track">
           <div class="tl-item">
             <div class="tl-dot"></div>
-            <div class="tl-year">2012</div>
-            <div class="tl-role">Sales Academy → Client Services (via Clay)</div>
-            <div class="tl-detail">Started as a Logistics Analyst, rising to Logistics Manager and then Procurement Manager. Managed a $25M client portfolio at 100% retention and led a team of 10 in procurement.</div>
+            <div class="tl-year">2012 – 2015</div>
+            <div class="tl-role">Sales Academy → Client Services</div>
+            <div class="tl-detail">Started as Logistics Analyst, rising to Logistics Manager. Managed a $25M client portfolio at 100% retention.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"></div>
-            <div class="tl-year">2012 – 2017</div>
+            <div class="tl-year">2015 – 2020</div>
             <div class="tl-role">Procurement</div>
-            <div class="tl-detail">Ran RFQ events averaging 9.5% net savings across $750M in client spend, and built the business case for an online bidding platform: a 427% three-year ROI, presented directly to the COO.</div>
+            <div class="tl-detail">Started as a Pricing Analyst and grew into a Pricing Manager, running RFQ events that averaged 9.5% net savings across $750M in client spend. I built the business case for an online bidding platform, a 427% three-year ROI presented directly to the COO, which became the Jaggaer partnership and made a small team scalable and nimble. I also spearheaded the market and carrier databases that SCA still uses today for market comparisons and deep dives.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"></div>
-            <div class="tl-year">2017 – 2022</div>
+            <div class="tl-year">2020 – 2022</div>
             <div class="tl-role">Client Operations → Implementation</div>
             <div class="tl-detail">Built and rolled out the Profit Model tool, lifting P&amp;L projection accuracy by 38%. Directly supported $93M in new signed spend, then took ownership of Ingersoll Rand's acquired-company implementations, cutting total project days by 30%.</div>
           </div>
@@ -319,14 +345,14 @@
             <div class="tl-dot"></div>
             <div class="tl-year">2022 – 2024</div>
             <div class="tl-role">Product Manager, Nolan Transportation Group</div>
-            <div class="tl-detail">Stepped outside TI to run Agile sprint planning for 30 engineers across 3 teams and design UX workflows in Figma, cutting development time 30% in three months.</div>
+            <div class="tl-detail">I deliberately moved into a tech role because I knew integrations and technical depth were a weak spot in my knowledge base. At Nolan, I ran Agile sprint planning for 30 engineers across 3 teams and designed UX workflows in Figma. Today, I'm by far the most comfortable Solutions Engineer discussing integrations.</div>
             <span class="tl-flag">Boomerang, by choice</span>
           </div>
           <div class="tl-item">
             <div class="tl-dot"></div>
             <div class="tl-year">2024 – Present</div>
             <div class="tl-role">Solutions Engineer, Transportation Insight</div>
-            <div class="tl-detail">Rejoined and re-ramped quickly. Closed Amrize, supported roughly $1.6M in signed revenue across 13 deals in 2025, built the team's standard demo guide, and was ranked the #1 Solutions Engineer Sales prefers to work with. Earned the 2025 Client Excellence award.</div>
+            <div class="tl-detail">Rejoined and re-ramped quickly. Closed Amrize, supported roughly $1.6M in signed revenue across 13 deals in 2025, built the team's standard demo guide, and was ranked the #1 Solutions Engineer Sales prefers to work with.</div>
           </div>
         </div>
 
@@ -358,24 +384,37 @@
       </button>
       <div class="topic-body-wrap"><div class="topic-body-inner"><div class="topic-body">
 
-        <p class="lede">My leadership style starts with collaboration, but the goal is clarity and action. I bring the right people and perspectives together, share information openly, and make tradeoffs visible so we can solve problems without ego or territorial thinking. The best outcome isn't individual credit. It's a team that understands the objective, can make strong decisions, and moves forward together.</p>
+        <p class="lede">Leadership is more than having direct reports, and I demonstrate it every day.</p>
+
+        <div class="flip-line">
+          <span class="flip-new">Already the person this team comes to for direction.</span>
+        </div>
+
+        <div class="trait-row">
+          <span class="chip">Active listening</span>
+          <span class="chip">Questions, not accusations</span>
+          <span class="chip">Forensic problem solving</span>
+          <span class="chip">Ideas grounded in practicality</span>
+        </div>
+
+        <p class="lede">My style starts with collaboration, but the goal is clarity and action. I don't let perfect get in the way of better. The win isn't individual credit. It's a team that knows the objective and moves on it together.</p>
 
         <div class="card-grid">
           <div class="card featured">
-            <div class="card-title">Collaboration over ego</div>
-            <div class="card-body">Best practices, internal challenges, market intelligence, wins, and breakdowns in process should be shared openly and treated as team property, not individual credit or blame. Collaboration works best when people can challenge ideas without becoming defensive.</div>
+            <div class="card-title">No Sacred Cows</div>
+            <div class="card-body">Best practices, challenges, market intel, wins, and breakdowns in process all belong to the team, not to individual credit or blame. Collaboration only works when people can challenge ideas without getting defensive.</div>
           </div>
           <div class="card">
             <div class="card-title">Clarity over comfort</div>
-            <div class="card-body">When ownership, process, or next steps are unclear, I surface the hard question early rather than letting ambiguity become risk. My role as a leader is to make objectives, tradeoffs, and accountability clear enough that people can make good decisions and move forward.</div>
+            <div class="card-body">When ownership or next steps are unclear, I will seek alignment instead of letting ambiguity turn into client risk. This lesson has been recently reinforced. I will make intentional time to seek clarity on ownership, cross-functionally and within my own team, and to communicate expectations clearly before ambiguity becomes opportunity cost.</div>
           </div>
           <div class="card">
             <div class="card-title">Bias toward action</div>
-            <div class="card-body">When something requires urgency, I don't spend time assigning blame or waiting for perfect conditions. I bring the right people together, establish what we're solving for, make the necessary tradeoffs, and move toward resolution.</div>
+            <div class="card-body">We're strong at brainstorming and continuous improvement. Where we fall short is execution. I will make deliberate strides to ensure every action has an owner and a commitment attached to it, not just an idea, which goes hand in hand with clarity over comfort.</div>
           </div>
           <div class="card">
             <div class="card-title">Calm under pressure</div>
-            <div class="card-body">A consistent theme in feedback I've received is calmness, clarity, and pragmatism in complex, high-pressure situations. I want my team to know that urgency doesn't require chaos. We can move quickly while still thinking clearly and treating people well.</div>
+            <div class="card-body">Calm, clarity, and pragmatism under pressure is consistent feedback I hear. Urgency doesn't require chaos. We can move fast and still think clearly and treat people well.</div>
           </div>
         </div>
 
@@ -402,20 +441,46 @@
               <li style="padding:13px 0; border-top:1px solid var(--line); font-size:13.8px; line-height:1.6; color:var(--muted);"><b style="color:var(--ink);">A forever-student mindset</b>. I look for the next thing to learn rather than settling into routine.</li>
               <li style="padding:13px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font-size:13.8px; line-height:1.6; color:var(--muted);"><b style="color:var(--ink);">Cross-departmental credibility</b>: relationships built across five departments that most candidates for this role won't have.</li>
             </ul>
-            <div class="mini-note">We work so independently as a team that I don't yet have full visibility into where our collective knowledge base has weak spots. One of my first moves will be a deliberate assessment, not to grade anyone, but to see where we should be building depth.</div>
+            <div class="mini-note">We work so independently as a team that I don't yet have full visibility into where our collective knowledge base has weak spots. My first 60 days are built around closing that gap deliberately, using tools like Gong to help in that assessment, not to grade anyone, but to see where we should be building depth.</div>
           </div>
           <div>
             <div class="gap-panel">
               <div class="gap-label">The real challenge</div>
               <h4>Suddenly managing peers</h4>
               <p>Whoever steps into this seat will face the same thing: suddenly managing people who were peers yesterday. I've lived this once already, when I became a TL manager, and I carry real lessons from it, not just a theory of how it should go.</p>
-              <div class="gap-plan">Closing it: <b>open communication</b> from day one, learning each person's individual development goals, and staying focused on driving the team toward our KPIs together. I'll encourage everyone to keep their relationship with David, find ways to give each person visibility with leadership, and still give autonomy inside clear standards.</div>
+              <div class="gap-plan">Closing it: <b>open communication</b> from day one, and learning each person's individual development goals. Every team member's needs are different. I believe I already have their respect, but trust is different, and I'll earn it by understanding what matters most to each person: a clear career path, organizational visibility, or flexibility. I'll also encourage everyone to keep their relationship with David, and give autonomy inside clear standards.</div>
             </div>
             <div class="gap-panel">
-              <div class="gap-label">Growth area</div>
-              <h4>Negotiation &amp; value positioning</h4>
-              <p>I've opened negotiations from a position that gave away more room than we needed, and watched deals close below where they should have landed.</p>
-              <div class="gap-plan">Closing it: I'm completing <b>Black Swan negotiation coursework</b> in 2026, and I want to run creative pricing exercises using closed-lost deal parameters, so we walk in with pre-gamed, workable structures instead of improvising under pressure. I'd also want to bring in formal negotiation training for the team if budget allows.</div>
+              <div class="gap-label">The personal goal</div>
+              <h4>A seat at the table</h4>
+              <p>This one isn't about managing the team. It's about making sure Solutions has real visibility into what the global business needs, not just what our department needs, and that our work maps clearly to those priorities.</p>
+              <div class="gap-plan">Closing it: this is why understanding the company landscape, inflight priorities, and what matters to each department and to leadership is part of my first 60 days. I want Solutions' seat at that table earned through relevance, not just tenure.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="assess-block">
+          <div class="assess-label">My First 60 Days</div>
+          <div class="assess-grid">
+            <div class="assess-card">
+              <div class="assess-move">Weeks 1&ndash;8</div>
+              <div class="assess-title">Understand the team and its context</div>
+              <ul class="assess-list">
+                <li>Understand individual goals and expectations</li>
+                <li>Understand upward communication cadence, reporting needs, and expectations</li>
+                <li>Understand cross-leadership expectations and needs of Solutions</li>
+                <li>Understand the company landscape: inflight prioritization and the projects that matter most to each department and to leadership, and how Solutions fits into it, so I can prioritize departmental goals accurately</li>
+                <li>Use Gong to better understand potential weak spots across the team, so I know where to focus on building bench strength</li>
+              </ul>
+            </div>
+            <div class="assess-card">
+              <div class="assess-move">Then</div>
+              <div class="assess-title">Build the plan, person by person</div>
+              <ul class="assess-list">
+                <li>Sit down with David early. He's likely already built plans and priorities for this team, and I want to build on that work, not start over as if it doesn't exist</li>
+                <li>Create individual development plans based on what I learn from each person on the team</li>
+                <li>Identify quick hits, quality-of-life, interest, or engagement improvements I can make for each person where possible, to win trust early</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -429,11 +494,13 @@
         <div>
           <div class="topic-headline"><span class="topic-index">04 · Where We're Headed</span></div>
           <div class="topic-title">Vision for Solutions</div>
-          <div class="topic-teaser">A deep bench, braver deal structures, and a bigger stage for what this team already knows.</div>
+          <div class="topic-teaser">A deep bench, braver deal structures, consistent deliverables, and a bigger stage for what this team already knows.</div>
         </div>
         <div class="topic-toggle"></div>
       </button>
       <div class="topic-body-wrap"><div class="topic-body-inner"><div class="topic-body">
+
+        <p class="lede">None of this starts from zero. This team has already moved forward in real ways under David's stewardship, more consistency, sharper focus, and real progress on standardization. This plan is about building on that foundation, not replacing it.</p>
 
         <div class="split-strong">
           <div class="strong-block block-working">
@@ -447,7 +514,7 @@
             </ul>
           </div>
           <div class="strong-block block-better">
-            <div class="lbl">What could be better</div>
+            <div class="lbl">What will be better</div>
             <ul>
               <li>Opportunity assignment still defaults to old habits and documented strengths, or Sales dictating which engineer to work with. This limits the bench strength in every category.</li>
               <li>Work product varies by individual. Each person is strong on their own, but non-negotiable standards for client deliverables would raise the bar across the whole team.</li>
@@ -459,7 +526,7 @@
 
         <div style="margin-top:44px;">
           <div class="eyebrow" style="margin-bottom:14px;">How I'd drive it forward</div>
-          <div class="pillar-row">
+          <div class="pillar-row" style="grid-template-columns: repeat(2,1fr);">
             <div class="pillar">
               <div class="pillar-tag">Deep bench, not heavy hitters</div>
               <div class="pillar-name">Deliberate Opportunity Distribution</div>
@@ -469,6 +536,11 @@
               <div class="pillar-tag">Challenge old thinking</div>
               <div class="pillar-name">Braver, Still-Competitive Deal Structures</div>
               <div class="pillar-desc">Game out the situations we hit repeatedly, starting with default fee waivers, and build creative, market-competitive revenue structures. Pair it with negotiation training focused on protecting margin on the opening offer, since Solutions usually sets it first.</div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-tag">Standards, not sameness</div>
+              <div class="pillar-name">Consistent Deliverables, Built Into Our AI Work</div>
+              <div class="pillar-desc">We've already started standardizing findings reviews, proposals, and internal documentation. I want to build that work into specific skills inside our AI initiatives, like Sidekick, so every engineer starts from the same foundation. Each person still tells the story their way. The output underneath it doesn't vary by who's holding the pen.</div>
             </div>
             <div class="pillar">
               <div class="pillar-tag">Collaboration first</div>
@@ -487,13 +559,25 @@
         <div>
           <div class="topic-headline"><span class="topic-index">05 · How We Win Together</span></div>
           <div class="topic-title">Cross-Functional Engagement</div>
-          <div class="topic-teaser">Solutions engages with Sales one way, and Client Services another. Worth defining that together, not leaving it to default assumptions.</div>
+          <div class="topic-teaser">A foundation of real working relationships. Reduce friction, find alignment, get it done.</div>
         </div>
         <div class="topic-toggle"></div>
       </button>
       <div class="topic-body-wrap"><div class="topic-body-inner"><div class="topic-body">
 
-        <p class="lede">The single most important thing in driving successful cross-functional engagements is understanding <b>the role each player is meant to play</b>, and defining that together rather than leaving it to default assumptions. Solutions engages with Sales one way and with Client Services another, and that difference is worth naming directly.</p>
+        <div class="foundation">
+          <div class="foundation-title">The foundation is already in place</div>
+          <div class="foundation-body">This isn't a relationship I'd be starting from scratch. I've sat in five departments, served on the Culture Committee, and built real, functioning working relationships with every leader in this organization. I'm active in EmpowHer, and part of a running book club that crosses Tech Ops, LTL, TL, and Implementations. Those relationships mean I can engage across teams more effectively than someone starting cold.</div>
+          <div class="foundation-chips">
+            <span class="chip">Five departments</span>
+            <span class="chip">Culture Committee</span>
+            <span class="chip">Every leader, working relationships</span>
+            <span class="chip">EmpowHer</span>
+            <span class="chip">Cross-org book club</span>
+          </div>
+        </div>
+
+        <p class="lede">That foundation spans every department this role touches. Here, I want to go deeper on one relationship specifically: how Solutions and Client Services work together on upsell, where <b>the role each side is meant to play</b> hasn't always been clear.</p>
 
         <div class="role-contrast">
           <div class="role-card">
@@ -512,9 +596,9 @@
         <div class="mini-note" style="margin-top:28px;">This isn't about either team doing something wrong. It's a genuine cultural difference in how Solutions engages with Sales versus how it engages with Client Services. Closing that gap means mutually finalizing a RACI and clear expectations together, not leaving ownership to assumption.</div>
 
         <div class="priority-list">
-          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">Define clear ownership across renewal milestones</div><div class="priority-body">Renewals get worked with real urgency. Where they lose time is in the handoffs between milestones, where ownership isn't always clearly defined. I want that clarity built in deliberately, not figured out mid-deal.</div></div></div>
+          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">A Solutions rotation through Client Services BAMs</div><div class="priority-body">Rotating Solutions participation into Client Services BAMs helps us hear the real concerns, values, and corporate goals of existing clients directly. It's a two-way benefit: Client Services gets another ear listening for upsell opportunities and creative problem-solving.</div></div></div>
           <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">A tightening partnership with Implementation</div><div class="priority-body">David now leads both Solutions and Implementation, which pulls these two teams closer by design, not just by circumstance. We've already built a standardized needs list for the handoff, and David is actively working it into Sidekick, our new AI project. I want to build on that momentum rather than start it from scratch.</div></div></div>
-          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">An onsite presence, working as a conduit for the team</div><div class="priority-body">Being one of two team members onsite in Hickory has already built real relationships with cross-functional and freight leadership. I intend to use that deliberately, not just for my own visibility, but as a conduit that brings the rest of the team, most of whom work remotely, into rooms and relationships they would not otherwise have easy access to.</div></div></div>
+          <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">Closer collaboration with Marketing</div><div class="priority-body">We're already building our own client-facing materials. We don't need to stop, but we could collaborate with Marketing on common needs, what they're hearing in the marketplace, and specific solution case studies to share. That arms Sales and SDRs better for new logo.</div></div></div>
           <div class="priority-item"><div class="priority-dot"></div><div><div class="priority-title">Structured, recurring touchpoints</div><div class="priority-body">Regular working sessions with Sales, Client Services, and Implementation leadership, plus continuing the cross-org "fireside chat" visibility sessions the team has already asked to keep. Individual engineers already build real relationships with cross-functional leaders through deal cycles and these fireside chats, and I want to keep encouraging that directly, while looking for more ways the organization can put this team's tenure to work on internal projects.</div></div></div>
         </div>
 
@@ -529,8 +613,7 @@
     <div class="capstone-panel">
       <div class="capstone-head">
         <div class="eyebrow" style="margin-bottom:18px;">In Conclusion</div>
-        <h2 class="capstone-title">Not five strengths. <em>One combination.</em></h2>
-        <p class="capstone-sub">Each of these exists somewhere else on this team. All of them, in one person, do not.</p>
+        <h2 class="capstone-title">Why <em>me.</em></h2>
       </div>
 
       <div class="capstone-list">
@@ -551,20 +634,26 @@
         <div class="capstone-item">
           <div class="capstone-dot"></div>
           <div>
-            <div class="capstone-item-title">A vision the team already asked for</div>
-            <div class="capstone-item-body">What I am proposing is not outside analysis. It reflects what this team has already told leadership it needs, with a plan to act on it.</div>
+            <div class="capstone-item-title">A proven history of self-improvement</div>
+            <div class="capstone-item-body">I've already named my own growth areas and built real timelines to close them, before anyone had to ask.</div>
           </div>
         </div>
         <div class="capstone-item">
           <div class="capstone-dot"></div>
           <div>
-            <div class="capstone-item-title">Growth areas named, not hidden</div>
-            <div class="capstone-item-body">I know exactly where I need to develop, and I already have a plan and a timeline attached to closing those gaps.</div>
+            <div class="capstone-item-title">Already leading, without the title</div>
+            <div class="capstone-item-body">People already come to me for direction. That won't change. It'll just come with the authority to act on it.</div>
+          </div>
+        </div>
+        <div class="capstone-item">
+          <div class="capstone-dot"></div>
+          <div>
+            <div class="capstone-item-title">Onsite, in Hickory</div>
+            <div class="capstone-item-body">One of only two team members based in the main office, with the in-person relationships across cross-functional and freight leadership that come with it.</div>
           </div>
         </div>
       </div>
 
-      <p class="capstone-punch">That is a track record with a plan attached, not just a pitch.</p>
     </div>
   </div>
 </section>
